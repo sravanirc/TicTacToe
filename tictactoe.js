@@ -6,6 +6,8 @@ let currentPlayer = "X";
 let winner = null;
 let moves = 0;
 
+
+document.getElementById("player").textContent = `Its player ${currentPlayer} turn.`;
 function handleClick(event){
     let cell = event.target;
     
@@ -56,6 +58,7 @@ function checkWin(){
 function displayWinner(){
     if(winner==="Draw"){
         message.textContent =  "It's a Draw!";
+        document.getElementById("player").textContent = `Nobody wins!`;
     }
     else {
         message.textContent = `Player ${winner} wins!`;
