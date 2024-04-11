@@ -20,6 +20,7 @@ function handleClick(event){
         winner = "Draw";
     }else {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
+    document.getElementById("player").textContent = `Its player ${currentPlayer} turn.`;
     }
 
   if(winner){
@@ -58,6 +59,7 @@ function displayWinner(){
     }
     else {
         message.textContent = `Player ${winner} wins!`;
+        document.getElementById("player").textContent = `Congratulations Player ${currentPlayer}!`;
     }
 }
 
